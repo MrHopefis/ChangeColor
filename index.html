@@ -1,0 +1,52 @@
+<style>
+body{
+  background-color: rgb(34, 34, 34);
+}
+
+#card{
+  height: 150px;
+  width: 150px;
+  background-color: rgb(136, 136, 136);
+   margin: 50px auto;
+   box-shadow: 5px 5px rgb(27, 27, 27);
+   align-items: center;
+}
+
+
+#card :hover{
+  height: 150px;
+  width: 150px;
+  background-color: rgb(201, 1, 1);
+   margin: 50px auto;
+   box-shadow: 5px 5px rgb(27, 27, 27);
+}
+
+h2{
+  color: rgba(255, 255, 255, 1);; 
+}
+
+  
+</style>
+<div>
+<h2>Change the color of box</h2>
+<input type="color" id="ins">
+</div>
+
+<div id="card">
+  
+  <center><h1>Hover over me</h1></center>
+
+</div>
+
+
+
+<script>
+  var input = document.getElementById("ins")
+var box = document.getElementById("card")
+
+input.value = "#888888"
+
+input.addEventListener('input',e=>{
+box.style.backgroundColor = input.value
+})
+</script>
